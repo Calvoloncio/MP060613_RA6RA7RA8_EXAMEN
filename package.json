@@ -1,0 +1,20 @@
+{
+    "private": true,
+    "scripts": {
+        "php": "php artisan serve",
+        "make:ctrl": "php artisan make:controller DemoController",
+        "make:migr": "php artisan make:migration create_demo_table",
+        "make:mode": "php artisan make:model Demo",
+        "make:all": "php artisan make:model Demo -mc",
+        "migr": "php artisan migrate",
+        "migr:fr": "php artisan migrate:fresh",
+        "migr:rb": "php artisan migrate:rollback",
+        "ui": "composer require laravel/ui",
+        "ui:vue": "php artisan ui vue --auth",
+        "clear": "composer dump-autoload"
+    },
+    "dependencies": {
+        "@fortawesome/fontawesome-free": "^6.2.0",
+        "validator-laravel": "^1.0.7"
+    }
+}

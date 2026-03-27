@@ -1,0 +1,107 @@
+# Eloquent Pizzeria (Laravel)
+
+A simple pizza ordering system demo built with Laravel and Eloquent ORM. It includes user/admin flows, pizza management, order processing, and role-based access control with admin dashboard.
+
+Home page
+<img width="1000" height="600" alt="image" src="https://github.com/user-attachments/assets/ddf391d5-90db-43f2-a93b-dc476e2201aa" />
+
+Client page
+<img width="1000" height="600" alt="image" src="https://github.com/user-attachments/assets/edf772aa-c8f5-40f8-a5c1-26e6802b5101" />
+
+Backoffice page
+<img width="1000" height="600" alt="image" src="https://github.com/user-attachments/assets/400f0f72-3892-419c-8cd9-ad590995a8c4" />
+
+
+
+## Overview
+- User authentication and profile management
+- Client and admin role-based access control
+- Browse and view pizza catalog with descriptions and pricing
+- Create and manage pizza orders with customizable options
+- Admin dashboard with statistics and management tools
+- Admin pizza management (create, read, update, delete)
+- Admin order management and order tracking
+
+## Tech Stack
+- Laravel (PHP)
+- MySQL (via XAMPP)
+- Composer
+- Bootstrap (views)
+
+## Prerequisites
+- PHP 7.3+ (XAMPP recommended)
+- MySQL running (XAMPP)
+- Composer installed
+
+## Setup
+1. Clone the repository:
+
+```bash
+   git clone https://github.com/Stucom-Pelai/MP0613_RA6RA7RA8_Eloquent-Pizzeria.git
+```
+
+2. Install Composer dependencies:
+
+```bash
+composer install
+```
+
+3. Copy the example enviroment file:
+
+```bash
+cp .env.example .env
+```
+
+4. Generate an application key
+
+```bash
+php artisan key:generate
+```
+
+5. Create a symbolic link from 'public/storage' to 'storage/app/public'
+
+```bash
+php artisan storage:link
+```
+
+6. Clear compiled view files
+
+```bash
+php artisan view:clear
+```
+
+7. Create mp0613_pizzeria database
+
+
+8. Run migrations and seed the database
+
+```bash
+php artisan migrate:fresh --seed
+```
+
+9. Start the Laravel development server 
+
+```bash
+php artisan serve
+```
+
+10. You are all set
+
+
+## User Flows
+### Client Flow
+1. Login as a client user
+2. Redirected to home page with pizza catalog
+3. Click on pizza to view details (name, type, base, description, price, toppings)
+4. Navigate to "Orders" to create new order
+5. Select pizza from catalog and submit order
+6. View your order history with created date and order details
+
+### Admin Flow
+1. Login as admin user
+2. Redirected to admin dashboard
+3. View dashboard statistics (total pizzas, orders, clients, total sales)
+4. Manage Pizzas: Create, read, edit, delete pizzas with image selection and topping management
+5. Manage Orders: View all orders from all clients, see order details, delete orders
+
+
