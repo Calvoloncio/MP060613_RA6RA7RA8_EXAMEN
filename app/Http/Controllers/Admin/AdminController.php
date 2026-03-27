@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Pizza;
 use App\Models\Order;
 use App\Models\User;
+use Termwind\Components\Ol;
 
 class AdminController extends Controller
 {
@@ -16,7 +17,7 @@ class AdminController extends Controller
             'total_pizzas' => Pizza::count(),
             'total_orders' => Order::count(),
             'total_users' => User::where('role', 'client')->count(),
-            'total_sales' => Pizza::sum('price'),
+            'total_sales' => Order::sum('price'),
             'recent_orders' => Order::with('user')->latest()->take(10)->get(),
         ];
 
